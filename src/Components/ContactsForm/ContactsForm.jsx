@@ -16,10 +16,10 @@ export default class ContactsForm extends Component {
     handleSubmit = evt => {
         evt.preventDefault();
         this.props.onSubmit(this.state);
-        this.reset();
+        this.resetState();
     };
 
-    reset = () => {
+    resetState = () => {
          this.setState({ name: '', number: '' });
     };
 

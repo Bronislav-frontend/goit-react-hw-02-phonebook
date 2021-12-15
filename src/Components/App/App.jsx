@@ -20,7 +20,6 @@ export default class App extends Component {
   }
   
    formSubmitHandler = data => {
-    const newData = { id: nanoid(3), ...data };
     const findName = this.state.contacts.find(
       contact => contact.name === data.name,
     );
@@ -28,7 +27,8 @@ export default class App extends Component {
       alert(`${data.name} is already in contacts.`);
       return;
     }
-
+     
+    const newData = { id: nanoid(3), ...data };
     this.setState(prevState => {
       return {
         contacts: [...prevState.contacts, newData],
