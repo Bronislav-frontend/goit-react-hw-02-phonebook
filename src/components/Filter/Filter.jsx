@@ -5,7 +5,7 @@ export default function Filter({ value, onChange }) {
     return (
     <label>
       <p className={s.text}>Find contacts by name</p>
-      <input type="text" name="" id="" value={value} onChange={onChange} />
+      <input type="text" value={value} onChange={onChange} />
     </label>
 )}
 
